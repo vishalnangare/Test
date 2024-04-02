@@ -1,0 +1,22 @@
+package com;
+
+public class SingleTon {
+
+    private static  SingleTon instance ;
+    private SingleTon() {}
+    public static SingleTon getInstance() {
+        if (instance == null) {
+            instance = new SingleTon();
+        }
+        return instance;
+    }
+
+    public static void main(String[] args) {
+
+        SingleTon singleTon1= getInstance();
+
+        SingleTon singleTon2= getInstance();
+
+        System.out.println(singleTon1==singleTon2);
+    }
+}
